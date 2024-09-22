@@ -20,7 +20,7 @@ def choice_checker(question, valid_list, allow_exit=False):
 
         # If they say yes, output 'program continues'
         for i in valid_list:
-            i_lowered = i.lower() # added this
+            i_lowered = i.lower()
             if response == i_lowered[:1] or response == i_lowered:
                 return i
 
