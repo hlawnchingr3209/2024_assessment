@@ -87,7 +87,8 @@ def choice_checker(question, valid_list, allow_exit=False):
 
         # If they say yes, output 'program continues'
         for i in valid_list:
-            if response == i[:1] or response == i:
+            i_lowered = i.lower()
+            if response == i_lowered[:1] or response == i_lowered:
                 return i
 
         # output error if item not in list, checks item if it is in valid_list, then continues to this.
