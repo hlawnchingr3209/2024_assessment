@@ -20,15 +20,16 @@ def choice_checker(question, valid_list, allow_exit=False):
 
         # If they say yes, output 'program continues'
         for i in valid_list:
-            if response == i[:1] or response == i:
+            i_lowered = i.lower() # added this
+            if response == i_lowered[:1] or response == i_lowered:
                 return i
 
         # output error if item not in list, checks item if it is in valid_list, then continues to this.
-        print(f"{error}\n")
+        print(f"\033[1m{error}\n\033[0m")
 
 
-user_choices = ['area', 'perimeter']
-shapes = ['triangle', 'square', 'circle']
+user_choices = ['Area', 'Perimeter']
+shapes = ['Triangle', 'Square', 'Circle']
 while True:
     user_choice = choice_checker("Choose area or perimeter... ", user_choices)
     print(user_choice)
