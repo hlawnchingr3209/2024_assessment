@@ -106,3 +106,11 @@ def shape_calculator(shape):
 
     # Return the formatted perimeter and area values
     return p_calculated, a_calculated
+
+
+while True:
+    user_shape = input('Shape: ')
+
+    user_shape_perimeter, user_shape_area = shape_calculator(user_shape)
+    print(f'\nCalculator Results:\n- Perimeter of your {user_shape} is {user_shape_perimeter}\n'
+          f'- Area of your {user_shape} is {user_shape_area}')
