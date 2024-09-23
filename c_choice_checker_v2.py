@@ -11,7 +11,7 @@ def choice_checker(question, valid_list):
 
         # If they say yes, output 'program continues'
         for i in valid_list:
-            if response == i or response == i:
+            if response == i or response == i[:1]:
                 return i
 
         # output error if item not in list, checks item if it is in valid_list, then continues to this.

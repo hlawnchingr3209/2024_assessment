@@ -31,3 +31,7 @@ def num_checker(question, mode, upper_boundary=None, allow_enter=False):
             print(f"\n\033[1mERROR - INVALID INPUT:\nPlease enter an INTEGER that is more than 0 and less than "
                   f"{upper_boundary}.\n\033[0m")
             continue
+
+while True:
+    user_number = num_checker("What is your number? ", int)
+    print(user_number)

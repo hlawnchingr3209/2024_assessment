@@ -102,7 +102,7 @@ def shape_calculator(shape):
     # Check if the shape is a square
     if shape == 'Square':
         # Prompt the user to enter the length of a side
-        side_1 = num_checker("What is the length of one of the sides? ", float)
+        side_1 = num_checker("What is the length of one of the sides? ", float, 999)
         # Calculate the perimeter (P = 4 * side) and the area (A = side^2)
         p_calculated = side_1 * 4
         a_calculated = side_1 * side_1
@@ -110,8 +110,8 @@ def shape_calculator(shape):
     # Check if the shape is a rectangle
     elif shape == 'Rectangle':
         # Prompt the user to enter the lengths of two sides
-        side_1 = num_checker("What is the length of Side 1? ", float)
-        side_2 = num_checker("What is the length of Side 2? ", float)
+        side_1 = num_checker("What is the length of Side 1? ", float, 999)
+        side_2 = num_checker("What is the length of Side 2? ", float, 999)
 
         # Calculate the perimeter (P = 2*(side_1 + side_2)) and the area (A = side_1 * side_2)
         p_calculated = 2 * (side_1 + side_2)
@@ -125,9 +125,9 @@ def shape_calculator(shape):
     elif shape == 'Triangle':
         while True:
             # Prompt the user to enter the lengths of the three sides
-            side_1 = num_checker("What is the length of Side 1? ", float)
-            side_2 = num_checker("What is the length of Side 2? ", float)
-            side_3 = num_checker("What is the length of Side 3? ", float)
+            side_1 = num_checker("What is the length of Side 1? ", float, 999)
+            side_2 = num_checker("What is the length of Side 2? ", float, 999)
+            side_3 = num_checker("What is the length of Side 3? ", float, 999)
 
             # Calculate the perimeter (P = side_1 + side_2 + side_3)
             p_calculated = side_1 + side_2 + side_3
@@ -151,7 +151,7 @@ def shape_calculator(shape):
 
     elif shape == 'Circle':
         # Prompt the user to enter the radius of the circle
-        radius = num_checker("What is the radius of the circle? ", float)
+        radius = num_checker("What is the radius of the circle? ", float, 999)
 
         # calculate the perimeter (2 * pi * radius) and area
         p_calculated = 3.14159 * 2 * radius

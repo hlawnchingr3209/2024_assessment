@@ -3,20 +3,6 @@ import pandas
 from datetime import datetime
 
 
-# creates a decorative statement to add aesthetics to the program
-def statement_generator(statement, decoration, above_below):
-    sides = decoration * 3
-
-    statement = f"{sides} {statement} {sides}"
-    top_bottom = above_below * len(statement)
-
-    print(top_bottom)
-    print(statement)
-    print(top_bottom)
-
-    return
-
-
 # shows instructions
 def display_instructions():
     print()
@@ -174,7 +160,7 @@ def save_calculations():
     # Create the DataFrame name and heading using the current date
     print()
     dataframe_name = f"Roney's Area and Perimeter Calculator ({day}_{month}_{year})"
-    statement_generator("Calculator Stats", "*", '=')
+    print("Calculator Stats")
 
     # Convert the DataFrame to a string representation
     calculations_txt = pandas.DataFrame.to_string(calculations_frame)
@@ -212,7 +198,7 @@ area_data_list = []
 perimeter_data_list = []
 
 # greets user
-statement_generator("Welcome To Roney's Area/Perimeter Calculator", '!', '=')
+print("Welcome To Roney's Area/Perimeter Calculator")
 
 # Ask if user has used calculator before, if not display instructions.
 used_before = choice_checker("Have you used this calculator before? ", yes_no_list)
