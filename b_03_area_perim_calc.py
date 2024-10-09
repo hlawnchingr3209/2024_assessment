@@ -68,12 +68,12 @@ def num_checker(question, mode, upper_boundary=None, allow_enter=False):
 def choice_checker(question, valid_list, allow_exit=False):
     # error code
     if len(valid_list) == 2:
-        error = f"\nERROR - INVALID INPUT!\nPlease choose either '{valid_list[0]}' or '{valid_list[1]}'."
+        error = f"\n\033[1mERROR - INVALID INPUT!\nPlease choose either '{valid_list[0]}' or '{valid_list[1]}'.\033[0m"
     else:
-        error = '\nERROR - INVALID INPUT!\nPlease choose from:'
+        error = '\n\033[1mERROR - INVALID INPUT!\nPlease choose from:'
         for i in valid_list:
             error += f'\n- {i}'
-        error += '.'
+        error += '.\033[0m'
 
     while True:
         # Ask the user if they have played before
